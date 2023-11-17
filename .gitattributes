@@ -4,6 +4,7 @@
 *.cginc text
 *.shader text
 
+*.dae merge=unityyamlmerge eol=lf
 *.mat merge=unityyamlmerge eol=lf
 *.anim merge=unityyamlmerge eol=lf
 *.unity merge=unityyamlmerge eol=lf
