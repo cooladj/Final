@@ -5,7 +5,7 @@ using UnityEngine;
 public class RockToPlayer : MonoBehaviour
 {
     public float speed;
-    public GameObject target;
+    private GameObject target;
     public float Damage;
     
     // Start is called before the first frame update
@@ -16,7 +16,7 @@ public class RockToPlayer : MonoBehaviour
 
     private void Awake()
     {
-        
+        target = GameObject.FindGameObjectWithTag("Target");
     }
 
     // Update is called once per frame
