@@ -23,6 +23,9 @@ public class ShipCollison : MonoBehaviour
         { 
             // todo Make a method on the heath canvas to remove Health and have it take in a float/int marking the Damage
             // rockToPlayer.Damage;
-        } 
+        }
+        
     }
+
+ 
 }
