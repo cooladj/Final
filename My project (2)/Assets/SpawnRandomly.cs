@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class SpawnRandomly : MonoBehaviour
@@ -7,11 +8,17 @@ public class SpawnRandomly : MonoBehaviour
     public float radius;
     public GameObject asteroid;
     [SerializeField] private float delay=2;
+    public int RockSpawnLocation;
+    
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(SpawnDelay());
+        for (int i = 0; i < RockSpawnLocation; i ++)
+        {
+            StartCoroutine(SpawnDelay());
+        }
     }
 
     // Update is called once per frame
@@ -27,4 +34,5 @@ public class SpawnRandomly : MonoBehaviour
         Instantiate(asteroid, randomPoint, Quaternion.identity);
         StartCoroutine(SpawnDelay());
     }
+    
 }

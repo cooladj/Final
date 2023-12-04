@@ -21,6 +21,7 @@ public class ShipCollison : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent<RockToPlayer>(out RockToPlayer rockToPlayer))
         { 
+            Debug.Log("hitplayer");
             // todo Make a method on the heath canvas to remove Health and have it take in a float/int marking the Damage
             // rockToPlayer.Damage;
         }
