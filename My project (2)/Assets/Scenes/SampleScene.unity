@@ -633,6 +633,37 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1864484162}
   m_SourcePrefab: {fileID: 100100000, guid: feed7f0bf9c28ea458500c3b332a4678, type: 3}
+--- !u!1 &1184587587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1184587588}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1184587588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184587587}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.968407, y: 14.492991, z: 33.75469}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1332909875
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,3 +1026,4 @@ SceneRoots:
   - {fileID: 1577174820}
   - {fileID: 909092319}
   - {fileID: 1930192038}
+  - {fileID: 1184587588}
