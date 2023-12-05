@@ -6,7 +6,7 @@ public class RockToPlayer : MonoBehaviour
 {
     public float speed;
     private GameObject target;
-    public float Damage;
+    public int Damage;
     
     // Start is called before the first frame update
     void Start()

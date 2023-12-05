@@ -55,7 +55,7 @@ public class FuelBarController : MonoBehaviour
     void UpdateFuelBar()
     {
         fuelBar.fillAmount = currentFuel / maxFuel;
-        timerText.text = "Fuel: " + Mathf.RoundToInt(currentFuel) + "s";
+        timerText.text = "Fuel: " + Mathf.RoundToInt(currentFuel);
     }
 
     public void IncreaseFuelByPercentage(float percentage)
