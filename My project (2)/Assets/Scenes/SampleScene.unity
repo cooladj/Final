@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseGameOverMenuGameObject: {fileID: 444426808}
-  audioManger: {fileID: 0}
+  audioManger: {fileID: 1793550786}
 --- !u!4 &355645640
 Transform:
   m_ObjectHideFlags: 0
@@ -844,6 +844,18 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1864484168}
   m_SourcePrefab: {fileID: 100100000, guid: feed7f0bf9c28ea458500c3b332a4678, type: 3}
+--- !u!114 &1166437752 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4827046908214974393, guid: 0385a8cf553f9e1429b91e8d21e8d023,
+    type: 3}
+  m_PrefabInstance: {fileID: 7601292567790958035}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fbfcd7e2381aff4db110427961f747c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1332909875
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,7 +1175,7 @@ MonoBehaviour:
   healthBarController: {fileID: 705628668}
   fuelBarController: {fileID: 257672604}
   audioManger: {fileID: 1793550786}
-  scoreManager: {fileID: 0}
+  scoreManager: {fileID: 1166437752}
 --- !u!64 &1864484162
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1563,6 +1575,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 6055537669292411532, guid: 0385a8cf553f9e1429b91e8d21e8d023,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 355645639}
     - target: {fileID: 6967790314164740151, guid: 0385a8cf553f9e1429b91e8d21e8d023,
         type: 3}
       propertyPath: m_Pivot.x

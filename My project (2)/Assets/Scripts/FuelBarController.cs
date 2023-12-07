@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class FuelBarController : MonoBehaviour
 {
-
     public Image fuelBar;
     public TextMeshProUGUI timerText;
     [SerializeField] private GameManager gameManager;
@@ -29,7 +28,7 @@ public class FuelBarController : MonoBehaviour
         currentFuel = maxFuel;
         UpdateFuelBar();
     }
-    
+
 
     // Update is called once per frame
     void Update()
@@ -40,15 +39,15 @@ public class FuelBarController : MonoBehaviour
             currentFuel -= fuelDecreaseRate;
             timer = 0f;
             UpdateFuelBar();
-
-            if(currentFuel == 0f)
-            {
-                gameManager.outofGas();
-            }
         }
 
-     
+        if (currentFuel <=0) 
+        {
+            Debug.Log("outofgas");
+            gameManager.outofGas();
+        }
     }
+
 
     void UpdateFuelBar()
     {

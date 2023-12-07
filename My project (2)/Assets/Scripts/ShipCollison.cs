@@ -41,6 +41,7 @@ public class ShipCollison : MonoBehaviour
 
         if (other.gameObject.TryGetComponent<Coins>(out Coins coins))
         {
+            Debug.Log("GettingCoin");
             audioManger.Play("Coin");
             scoreManager.IncrementScore(coins.pointIncrease);
         }
