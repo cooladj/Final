@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,10 +9,15 @@ public class HealthBarController : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
-
+    public GameObject GameMangerObject;
     public Image healthBar;
+    private GameManager gameManager;
+    private void Awake()
+    {
+        gameManager = GameMangerObject.GetComponent<GameManager>();
+    }
 
-   void Start()
+    void Start()
     {
         currentHealth = maxHealth;
         UpdateHealthBar();
@@ -31,7 +37,8 @@ public class HealthBarController : MonoBehaviour
 
         if(currentHealth == 0)
         {
-            GameOver();
+            gameManager.OutOfLives();
+            
         }
 
     }

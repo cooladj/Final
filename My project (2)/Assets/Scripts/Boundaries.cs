@@ -15,10 +15,10 @@ public class Boundaries : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        screenBounds = Camera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.transform.position.z));
+      
         objectWidth = transform.GetComponentInChildren<MeshRenderer>().bounds.extents.x; //extents = size of width / 2
         objectHeight = transform.GetComponentInChildren<MeshRenderer>().bounds.extents.y; //extents = size of height / 2
-        Debug.Log(screenBounds.y);
+       
     }
 
     // Update is called once per frame

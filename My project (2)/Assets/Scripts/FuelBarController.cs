@@ -9,6 +9,7 @@ public class FuelBarController : MonoBehaviour
 
     public Image fuelBar;
     public TextMeshProUGUI timerText;
+    [SerializeField] private GameManager gameManager;
 
     private float maxFuel = 120f;
     private float currentFuel;
@@ -42,14 +43,11 @@ public class FuelBarController : MonoBehaviour
 
             if(currentFuel == 0f)
             {
-                GameOver();
+                gameManager.outofGas();
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.LeftAlt))
-        {
-            IncreaseFuelByPercentage(fuelIncreasePercentage);
-        }
+     
     }
 
     void UpdateFuelBar()

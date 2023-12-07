@@ -5,10 +5,17 @@ using UnityEngine;
 
 public class SpawnRandomly : MonoBehaviour
 {
-    public float radius;
+    public float radius=50;
     public GameObject asteroid;
     [SerializeField] private float delay=2;
     public int RockSpawnLocation;
+    [SerializeField] private float gasDelay = 4;
+    public GameObject Gas;
+    public int gasSpawnRadius;
+    public int CoinDelay;
+    public int coinSpawnLocation;
+    public GameObject Coins;
+    public int coinSpawnradius;
     
     
 
@@ -17,8 +24,16 @@ public class SpawnRandomly : MonoBehaviour
     {
         for (int i = 0; i < RockSpawnLocation; i ++)
         {
+            
             StartCoroutine(SpawnDelay());
         }
+
+        for (int i = 0; i < coinSpawnLocation; i++)
+        {
+            StartCoroutine(PointDelay());
+        }
+
+        StartCoroutine(GasSpawnDelay());
     }
 
     // Update is called once per frame
@@ -34,5 +49,25 @@ public class SpawnRandomly : MonoBehaviour
         Instantiate(asteroid, randomPoint, Quaternion.identity);
         StartCoroutine(SpawnDelay());
     }
+    private IEnumerator GasSpawnDelay()
+    {
+        yield return new WaitForSeconds(gasDelay);
+        Vector3 randomPoint = transform.position+Random.insideUnitSphere* gasSpawnRadius;
+        
+        Instantiate(Gas, randomPoint, Quaternion.identity);
+        StartCoroutine(GasSpawnDelay());
     
+    }
+
+    private IEnumerator PointDelay()
+    {
+        yield return new WaitForSeconds(CoinDelay);
+        Vector3 randomPoint = transform.position+Random.insideUnitSphere* coinSpawnradius;
+
+        Instantiate(Coins, randomPoint, Quaternion.identity);
+        StartCoroutine(PointDelay());
+
+
+
+    }
 }

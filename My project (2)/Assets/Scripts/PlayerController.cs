@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    private Boundaries boundaries;
+    
     public Animator playerShipSphereAnimator;
     public CharacterController controller;
     public float speed = 36f;
@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        boundaries = gameObject.GetComponent<Boundaries>();
+       
     }
 
     void Start()
