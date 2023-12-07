@@ -136,6 +136,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 40
   Damage: 10
+  fracture: {fileID: 0}
+  point: 10
 --- !u!54 &638533293601003004
 Rigidbody:
   m_ObjectHideFlags: 0
